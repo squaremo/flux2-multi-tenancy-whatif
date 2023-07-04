@@ -1,12 +1,14 @@
-# flux2-multi-tenancy
+# flux2-multi-tenancy for trying out `flux-whatif`
 
-[![test](https://github.com/fluxcd/flux2-multi-tenancy/workflows/test/badge.svg)](https://github.com/fluxcd/flux2-multi-tenancy/actions)
-[![e2e](https://github.com/fluxcd/flux2-multi-tenancy/workflows/e2e/badge.svg)](https://github.com/fluxcd/flux2-multi-tenancy/actions)
-[![license](https://img.shields.io/github/license/fluxcd/flux2-multi-tenancy.svg)](https://github.com/fluxcd/flux2-multi-tenancy/blob/main/LICENSE)
+I've borrowed this repo for trying out squaremo/flux-whatif, because it has real-world examples of syncs that apply Flux objects.
 
-This repository serves as a starting point for managing multi-tenant clusters with Git and Flux v2.
+Some things to try (after bootstrapping Flux against this repo, or otherwise creating a GitRepository and Kustomization object pointing here):
 
-![](docs/img/flux2-multi-tenancy.png)
+ - `flux-whatif merge --url ssh://git@github.com/squaremo/flux2-multi-tenancy-whatif --branch main --ref refs/pull/1/head` (what if PR 1 was merged)
+ - `flux-whatif merge --url ssh://git@github.com/squaremo/flux2-multi-tenancy-whatif --branch main --ref refs/pull/2/head` (what if PR 2, which changes a GitRepo definition, was merged)
+
+
+# Here's the rest of the original README
 
 ## Roles
 
