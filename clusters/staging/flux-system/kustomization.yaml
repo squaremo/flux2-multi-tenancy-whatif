@@ -25,3 +25,8 @@ patches:
     target:
       kind: Kustomization
       name: "flux-system"
+images:
+- name: ghcr.io/fluxcd/notification-controller
+  newTag: 1.0.0
+- name: ghcr.io/fluxcd/source-controller
+  newTag: 1.0.0
